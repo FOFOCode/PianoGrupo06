@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    android:id="@+id/main"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/teclado"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/teclaC"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="@null"
+            android:text="Do"
+            android:onClick="sonidoDoNormal"
+            android:textColor="#FFFFFF"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:id="@+id/teclaD"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="@null"
+            android:text="Re"
+            android:onClick="sonidoReNormal"
+            android:textColor="#FFFFFF"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:id="@+id/teclaE"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="@null"
+            android:text="Mi"
+            android:onClick="sonidoMiNormal"
+            android:textColor="#FFFFFF"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:id="@+id/teclaF"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="@null"
+            android:text="Fa"
+            android:onClick="sonidoFaNormal"
+            android:textColor="#FFFFFF"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:id="@+id/teclaG"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="@null"
+            android:text="Sol"
+            android:onClick="sonidoSolNormal"
+            android:textColor="#FFFFFF"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:id="@+id/teclaA"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="@null"
+            android:text="La"
+            android:onClick="sonidoLaNormal"
+            android:textColor="#FFFFFF"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:id="@+id/teclaB"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="@null"
+            android:text="Si"
+            android:onClick="sonidoSiNormal"
+            android:textColor="#FFFFFF"
+            android:layout_margin="1dp" />
+    </LinearLayout>
+</LinearLayout>
