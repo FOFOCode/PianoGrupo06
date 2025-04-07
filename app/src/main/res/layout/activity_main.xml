@@ -1,102 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/black"
+    android:padding="10dp"
     android:id="@+id/main"
+    android:background="@android:color/black"
     android:gravity="bottom">
 
+    <!-- Cabecera (sin cambios) -->
     <LinearLayout
-        android:id="@+id/teclado"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="horizontal">
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="#1A1A1A"
+        android:elevation="4dp">
 
-        <Button
-            android:id="@+id/teclaC"
+        <TextView
+            android:id="@+id/textoYamaha"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="@null"
-            android:text="Do"
-            android:onClick="sonidoDoNormal"
-            android:textColor="#FFFFFF"
-            android:layout_margin="1dp" />
+            android:text="Yamaha"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#FFD700"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="4dp" />
 
-        <Button
-            android:id="@+id/teclaD"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="@null"
-            android:text="Re"
-            android:onClick="sonidoReNormal"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSustain"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:text="Sustain"
+            android:onClick="activarSustain"
+            android:backgroundTint="#000000"
+            android:textSize="18sp"
             android:textColor="#FFFFFF"
-            android:layout_margin="1dp" />
-
-        <Button
-            android:id="@+id/teclaE"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="@null"
-            android:text="Mi"
-            android:onClick="sonidoMiNormal"
-            android:textColor="#FFFFFF"
-            android:layout_margin="1dp" />
-
-        <Button
-            android:id="@+id/teclaF"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="@null"
-            android:text="Fa"
-            android:onClick="sonidoFaNormal"
-            android:textColor="#FFFFFF"
-            android:layout_margin="1dp" />
-
-        <Button
-            android:id="@+id/teclaG"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="@null"
-            android:text="Sol"
-            android:onClick="sonidoSolNormal"
-            android:textColor="#FFFFFF"
-            android:layout_margin="1dp" />
-
-        <Button
-            android:id="@+id/teclaA"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="@null"
-            android:text="La"
-            android:onClick="sonidoLaNormal"
-            android:textColor="#FFFFFF"
-            android:layout_margin="1dp" />
-
-        <Button
-            android:id="@+id/teclaB"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:backgroundTint="@null"
-            android:text="Si"
-            android:onClick="sonidoSiNormal"
-            android:textColor="#FFFFFF"
-            android:layout_margin="1dp" />
+            android:textStyle="bold"
+            android:elevation="6dp" />
     </LinearLayout>
+
+    <!-- Frame para superponer teclas -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <!-- Teclas blancas - Estilo mejorado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#F5F5F5"
+            android:paddingTop="2dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:onClick="sonidoDoNormal"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:stateListAnimator="@null"
+                android:elevation="2dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaD"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:onClick="sonidoReNormal"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="1dp"
+                android:stateListAnimator="@null"
+                android:elevation="2dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:onClick="sonidoMiNormal"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="1dp"
+                android:stateListAnimator="@null"
+                android:elevation="2dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaF"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:onClick="sonidoFaNormal"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="1dp"
+                android:stateListAnimator="@null"
+                android:elevation="2dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaG"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:onClick="sonidoSolNormal"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="1dp"
+                android:stateListAnimator="@null"
+                android:elevation="2dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaA"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:onClick="sonidoLaNormal"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="1dp"
+                android:stateListAnimator="@null"
+                android:elevation="2dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaB"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:onClick="sonidoSiNormal"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginRight="1dp"
+                android:stateListAnimator="@null"
+                android:elevation="2dp"/>
+        </LinearLayout>
+
+        <!-- Teclas negras - Modificado para más espacio -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp">
+
+            <!-- Espacio antes de la primera tecla negra -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"/>
+
+            <!-- Tecla C# -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaCs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/tecla_negra_selector"
+                android:onClick="sonidoDoSostenido"
+                android:layout_marginEnd="5dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"/>
+
+            <!-- Tecla D# -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaDs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/tecla_negra_selector"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:onClick="sonidoReSostenido"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="12dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"/>
+
+            <!-- Espacio entre D# y F# -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.4"/>
+
+            <!-- Tecla F# -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaFs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/tecla_negra_selector"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:onClick="sonidoFaSostenido"
+                android:layout_marginEnd="15dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"/>
+
+            <!-- Tecla G# -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaGs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/tecla_negra_selector"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:onClick="sonidoSolSostenido"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"/>
+
+            <!-- Tecla A# -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/teclaAs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/tecla_negra_selector"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:onClick="sonidoLaSostenido"
+                android:layout_marginStart="30dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"/>
+
+            <!-- Espacio después de la última tecla negra -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"/>
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>
