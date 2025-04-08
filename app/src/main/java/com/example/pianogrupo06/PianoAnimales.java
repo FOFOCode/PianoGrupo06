@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class PianoAnimales extends AppCompatActivity {
 
     private boolean sustainActivo = false;
-    private Toast currentToast;  // Variable para almacenar el Toast actual
+    private Toast currentToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
