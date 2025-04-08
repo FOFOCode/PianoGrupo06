@@ -2,4 +2,14 @@
     <string name="app_name">PianoGrupo06</string>
     <string name="txt_btnSustain">Sustain</string>
     <string name="txt_tituloYamaha">Yamaha</string>
+    <string name="animales">Animales</string>
+    <string name="imagen_cabecera_selva">Imagen cabecera selva</string>
+    <string name="tecla_jaguar">Tecla Jaguar</string>
+    <string name="icono_jaguar">Icono Jaguar</string>
+    <string name="icono_elefante">Icono Elefante</string>
+    <string name="icono_loro">Icono Loro</string>
+    <string name="icono_serpiente">Icono Serpiente</string>
+    <string name="icono_rana">Icono Rana</string>
+    <string name="icono_mono">Icono Mono</string>
+    <string name="icono_tigre">Icono Tigre</string>
 </resources>

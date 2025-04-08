@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/main"
+    android:background="#a2c75d"
+    android:gravity="bottom">
+
+
+    <ImageView
+        android:id="@+id/cabeceraSelva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:contentDescription="@string/imagen_cabecera_selva"
+        android:elevation="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vibe5"
+        tools:ignore="ImageContrastCheck" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#F5F5F5"
+            android:paddingTop="2dp"
+            tools:ignore="DisableBaselineAlignment,UselessParent">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/teclaC"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tecla_blanca_selector"
+                    android:elevation="2dp"
+                    android:onClick="tocarJaguar"
+                    android:stateListAnimator="@null"
+                    android:contentDescription="@string/tecla_jaguar"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/iconoJaguar"
+                    android:layout_width="87dp"
+                    android:layout_height="87dp"
+                    android:src="@drawable/iconjaguar2"
+                    android:elevation="8dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/icono_jaguar"
+                    tools:ignore="VisualLintBounds" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                tools:ignore="RtlHardcoded">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/teclaD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tecla_blanca_selector"
+                    android:elevation="2dp"
+                    android:onClick="tocarElefante"
+                    android:stateListAnimator="@null"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/iconoElefante"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:src="@drawable/iconelefante"
+                    android:elevation="8dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/icono_elefante"
+                    tools:ignore="VisualLintBounds" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                tools:ignore="RtlHardcoded">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/teclaE"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tecla_blanca_selector"
+                    android:elevation="2dp"
+                    android:onClick="tocarLoro"
+                    android:stateListAnimator="@null"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/iconoLoro"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/iconloro"
+                    android:elevation="8dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/icono_loro"
+                    tools:ignore="VisualLintBounds" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/teclaF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tecla_blanca_selector"
+                    android:elevation="2dp"
+                    android:onClick="tocarSerpiente"
+                    android:stateListAnimator="@null"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/iconoSerpiente"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/iconserpiente"
+                    android:elevation="8dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/icono_serpiente"
+                    tools:ignore="VisualLintBounds" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="1dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/teclaG"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tecla_blanca_selector"
+                    android:elevation="2dp"
+                    android:onClick="tocarRana"
+                    android:stateListAnimator="@null"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/iconoRana"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/iconrana"
+                    android:elevation="8dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/icono_rana"
+                    tools:ignore="VisualLintBounds" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                tools:ignore="RtlHardcoded">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/teclaA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tecla_blanca_selector"
+                    android:elevation="2dp"
+                    android:onClick="tocarMono"
+                    android:stateListAnimator="@null"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/iconoMono"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/iconmono"
+                    android:elevation="8dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/icono_mono"
+                    tools:ignore="VisualLintBounds" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                tools:ignore="RtlHardcoded">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/teclaB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tecla_blanca_selector"
+                    android:elevation="2dp"
+                    android:onClick="tocarTigre"
+                    android:stateListAnimator="@null"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/iconoTigre"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:src="@drawable/icontigre"
+                    android:elevation="8dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/icono_tigre"
+                    tools:ignore="VisualLintBounds" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>
