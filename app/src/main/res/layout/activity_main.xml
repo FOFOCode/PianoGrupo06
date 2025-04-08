@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -26,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Yamaha"
+            android:text="@string/txt_tituloYamaha"
             android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="#FFD700"
@@ -37,13 +38,13 @@
             android:id="@+id/btnSustain"
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:text="Sustain"
-            android:onClick="activarSustain"
+            android:text="@string/txt_btnSustain"
             android:backgroundTint="#000000"
             android:textSize="18sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#F44336"
             android:textStyle="bold"
             android:elevation="6dp" />
+
     </LinearLayout>
 
     <!-- Frame para superponer teclas -->
@@ -63,93 +64,100 @@
                 android:id="@+id/teclaC"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/tecla_blanca_selector"
-                android:onClick="sonidoDoNormal"
-                android:textSize="16sp"
-                android:textColor="#333333"
                 android:layout_marginLeft="1dp"
                 android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/tecla_blanca_selector"
+                android:elevation="2dp"
+                android:onClick="tocarDo"
                 android:stateListAnimator="@null"
-                android:elevation="2dp"/>
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaD"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/tecla_blanca_selector"
-                android:onClick="sonidoReNormal"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_marginRight="1dp"
+                android:elevation="2dp"
+                android:onClick="tocarRe"
                 android:stateListAnimator="@null"
-                android:elevation="2dp"/>
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaE"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/tecla_blanca_selector"
-                android:onClick="sonidoMiNormal"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_marginRight="1dp"
+                android:elevation="2dp"
+                android:onClick="tocarMi"
                 android:stateListAnimator="@null"
-                android:elevation="2dp"/>
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaF"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/tecla_blanca_selector"
-                android:onClick="sonidoFaNormal"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_marginRight="1dp"
+                android:elevation="2dp"
+                android:onClick="tocarFa"
                 android:stateListAnimator="@null"
-                android:elevation="2dp"/>
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaG"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/tecla_blanca_selector"
-                android:onClick="sonidoSolNormal"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_marginRight="1dp"
+                android:elevation="2dp"
+                android:onClick="tocarSol"
                 android:stateListAnimator="@null"
-                android:elevation="2dp"/>
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaA"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/tecla_blanca_selector"
-                android:onClick="sonidoLaNormal"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_marginRight="1dp"
+                android:elevation="2dp"
+                android:onClick="tocarLa"
                 android:stateListAnimator="@null"
-                android:elevation="2dp"/>
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaB"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/tecla_blanca_selector"
-                android:onClick="sonidoSiNormal"
-                android:textSize="16sp"
-                android:textColor="#333333"
-                android:layout_marginRight="1dp"
+                android:elevation="2dp"
+                android:onClick="tocarSi"
                 android:stateListAnimator="@null"
-                android:elevation="2dp"/>
+                android:textColor="#333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded,SpeakableTextPresentCheck" />
         </LinearLayout>
 
         <!-- Teclas negras - Modificado para más espacio -->
@@ -171,27 +179,30 @@
                 android:id="@+id/teclaCs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="0.8"
                 android:background="@drawable/tecla_negra_selector"
-                android:onClick="sonidoDoSostenido"
-                android:layout_marginEnd="5dp"
                 android:elevation="4dp"
-                android:stateListAnimator="@null"/>
+                android:onClick="tocarDoSostenido"
+                android:stateListAnimator="@null"
+                tools:ignore="SpeakableTextPresentCheck" />
+
 
             <!-- Tecla D# -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaDs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                android:background="@drawable/tecla_negra_selector"
-                android:textColor="#AAAAAA"
-                android:textSize="12sp"
-                android:onClick="sonidoReSostenido"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="12dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/tecla_negra_selector"
                 android:elevation="4dp"
-                android:stateListAnimator="@null"/>
+                android:onClick="tocarReSostenido"
+                android:stateListAnimator="@null"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <!-- Espacio entre D# y F# -->
             <View
@@ -204,43 +215,46 @@
                 android:id="@+id/teclaFs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
                 android:layout_weight="0.8"
                 android:background="@drawable/tecla_negra_selector"
+                android:elevation="4dp"
+                android:onClick="tocarFaSostenido"
+                android:stateListAnimator="@null"
                 android:textColor="#AAAAAA"
                 android:textSize="12sp"
-                android:onClick="sonidoFaSostenido"
-                android:layout_marginEnd="15dp"
-                android:elevation="4dp"
-                android:stateListAnimator="@null"/>
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <!-- Tecla G# -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaGs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                android:background="@drawable/tecla_negra_selector"
-                android:textColor="#AAAAAA"
-                android:textSize="12sp"
-                android:onClick="sonidoSolSostenido"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="15dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/tecla_negra_selector"
                 android:elevation="4dp"
-                android:stateListAnimator="@null"/>
+                android:onClick="tocarSolSostenido"
+                android:stateListAnimator="@null"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <!-- Tecla A# -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/teclaAs"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
                 android:layout_weight="0.8"
                 android:background="@drawable/tecla_negra_selector"
+                android:elevation="4dp"
+                android:onClick="tocarLaSostenido"
+                android:stateListAnimator="@null"
                 android:textColor="#AAAAAA"
                 android:textSize="12sp"
-                android:onClick="sonidoLaSostenido"
-                android:layout_marginStart="30dp"
-                android:elevation="4dp"
-                android:stateListAnimator="@null"/>
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <!-- Espacio después de la última tecla negra -->
             <View
@@ -248,5 +262,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.2"/>
         </LinearLayout>
+
     </FrameLayout>
+
 </LinearLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PianoGrupo06</string>
+    <string name="txt_btnSustain">Sustain</string>
+    <string name="txt_tituloYamaha">Yamaha</string>
 </resources>
